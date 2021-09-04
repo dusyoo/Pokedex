@@ -1,5 +1,6 @@
 Created by Dustin Yoo
 [Repo here](https://github.com/dusyoo/Pokedex)
+<br>
 This website was built using HTML, CSS, and Javascript. I used Visual Studio code and PokeAPI.
 
 # Pokedex
