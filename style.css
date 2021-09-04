@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: linear-gradient(
+		rgba(227, 221, 255, 255),
+		rgba(170, 216, 250, 255)
+	);
+
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	font-family: "Lato", sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	transition: background 0.2s linear;
+}
+
+body h1 {
+	color: indigo;
+}
+
+body.dark {
+	background: #292c35;
+	font-family: "Press Start 2P", sans-serif;
+}
+
+h1 {
+	letter-spacing: 5px;
+}
+
+body.dark h1 {
+	color: honeydew;
+	font-family: "Press Start 2P", sans-serif;
+}
+
+body h2 {
+	font-size: 12px;
+	color: indigo;
+}
+
+body.dark h2 {
+	color: honeydew;
+}
+
+/* Pokemon cards */
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.pokemon {
+	background-color: #eee;
+	border-radius: 20px;
+	box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+	margin: 10px;
+	padding: 20px;
+	text-align: center;
+}
+
+.pokemon:hover {
+	animation: bounce 0.9s ease;
+}
+
+@keyframes bounce {
+	/* calculate each percentage along the patch of animation */
+	20% {
+		transform: translateY(-6px);
+	}
+}
+
+.test-container {
+	border: 1px solid black;
+	width: 25%;
+	height: 25%;
+}
+
+.img-container {
+	background-color: rgba(0, 0, 0, 0.05);
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	margin: 0 auto 0 auto;
+}
+
+.img-container img {
+	margin-top: 10px;
+	/* box-shadow: 0 0 5px 5px grey; */
+	/* background-color: rgba(0, 0, 0, 0.1); */
+	/* border-radius: 25%; */
+	/* position: absolute; */
+}
+
+.info {
+	margin-top: 20px;
+}
+
+.number {
+	background-color: rgba(0, 0, 0, 0.15);
+	padding: 5px 10px;
+	border-radius: 10px;
+	font-size: 15px;
+}
+
+.name {
+	margin: 15px 0 7px;
+	letter-spacing: 1px;
+	font-size: 15px;
+}
+
+/* Search bar */
+
+.search {
+	position: relative;
+	height: 50px;
+}
+
+.search.dark {
+	font-family: "Press Start 2P", sans-serif;
+}
+
+#input {
+	background-color: #e3c4ee;
+	border: 0;
+	font-size: 16px;
+	padding: 15px;
+	height: 50px;
+	width: 50px;
+	transition: width 0.3s ease;
+	font-family: "Press Start 2P", sans-serif;
+}
+
+::placeholder {
+	font-family: "Press Start 2P", sans-serif;
+	font-size: 12px;
+}
+
+::placeholder {
+	font-family: "Lato", sans-serif;
+}
+
+.btn {
+	background-color: #e3c4ee;
+	border: none;
+	cursor: pointer;
+	font-size: 24px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 50px;
+	transition: transform 0.3s ease;
+}
+
+.btn:focus,
+input:focus {
+	outline: none;
+}
+
+/* Abilities and Abilities button */
+.abilities {
+	margin: 0;
+	padding-top: 20px;
+}
+
+.abilities-container {
+	background-color: #eee;
+	position: absolute;
+	border: 1px solid black;
+	width: 25%;
+	height: 25%;
+}
+
+.displayAbilities {
+	margin: 0;
+	padding: 10px;
+	font-size: 12px;
+	word-wrap: break-word;
+	word-break: break-all;
+	white-space: initial;
+}
+
+button {
+	/* margin: 0;
+	padding: 10px;
+	border-color: #9c9a91;
+	background: #fcf4c0;
+	font-family: "Press Start 2P", sans-serif;
+	font-size: 10px;
+	text-align: inherit;
+	cursor: pointer; */
+	/* Clean style */
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+	background: none;
+	padding: 0;
+	color: var(--button-text-color);
+	cursor: pointer;
+
+	--button-text-color: var(--background-color);
+	--button-text-color-hover: var(--button-background-color);
+	--border-color: #7d8082;
+	--button-background-color: #ece8e1;
+	--highlight-color: #ff4655;
+	--button-inner-border-color: transparent;
+	--button-bits-color: var(--background-color);
+	--button-bits-color-hover: var(--button-background-color);
+
+	position: relative;
+	padding: 4px;
+	margin-bottom: 10px;
+	font-family: "Lato", sans-serif;
+	font-weight: bold;
+	font-size: 10px;
+	transition: all 0.15s ease;
+}
+
+button::before,
+button::after {
+	content: "";
+	display: block;
+	position: absolute;
+	right: 0;
+	left: 0;
+	height: calc(50% - 5px);
+	border: 1px solid var(--border-color);
+	transition: all 0.15s ease;
+}
+
+button::before {
+	top: 0;
+	border-bottom-width: 0;
+}
+
+button::after {
+	bottom: 0;
+	border-top-width: 0;
+}
+
+button:active,
+button:focus {
+	outline: none;
+}
+
+button:active::before,
+button:active::after {
+	right: 3px;
+	left: 3px;
+}
+
+button:active::before {
+	top: 3px;
+}
+
+button:active::after {
+	bottom: 3px;
+}
+
+.btn__inner {
+	position: relative;
+	display: block;
+	padding: 20px 30px;
+	background-color: var(--button-background-color);
+	overflow: hidden;
+	box-shadow: inset 0px 0px 0px 1px var(--button-inner-border-color);
+}
+
+.btn__inner::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 2px;
+	background-color: var(--button-bits-color);
+}
+
+.btn__inner::after {
+	content: "";
+	display: block;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 4px;
+	height: 4px;
+	background-color: var(--button-bits-color);
+	transition: all 0.2s ease;
+}
+
+.btn__slide {
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: -1px;
+	left: -8px;
+	width: 0;
+	background-color: var(--highlight-color);
+	transform: skew(-15deg);
+	transition: all 0.2s ease;
+}
+
+.btn__content {
+	position: relative;
+	font-family: "Press Start 2P", sans-serif;
+}
+
+button:hover {
+	color: var(--button-text-color-hover);
+}
+
+button:hover .btn__slide {
+	width: calc(100% + 15px);
+}
+
+button:hover .btn__inner::after {
+	background-color: var(--button-bits-color-hover);
+}
+
+button--light {
+	--button-background-color: var(--background-color);
+	--button-text-color: var(--highlight-color);
+	--button-inner-border-color: var(--highlight-color);
+	--button-text-color-hover: #ece8e1;
+	--button-bits-color-hover: #ece8e1;
+}
+
+.hide {
+	display: none;
+}
+
+.active #input {
+	width: 200px;
+}
+
+.active .btn {
+	transform: translateX(198px);
+}
+
+/* Theme switcher */
+.label {
+	background-color: rgb(63, 63, 63);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 50px;
+	position: relative;
+	padding: 5px;
+	height: 26px;
+	width: 50px;
+	transform: scale(1.5);
+}
+
+.fa-gamepad {
+	color: #4b505f;
+	left: 5px;
+}
+
+.fa-heart {
+	color: rgb(227, 221, 255);
+}
+
+.ball {
+	background-color: #e3c4ee;
+	border-radius: 50%;
+	position: absolute;
+	width: 22px;
+	height: 22px;
+	top: 2px;
+	left: 2px;
+	transition: transform 0.15s linear;
+}
+
+.checkbox:checked + .label .ball {
+	transform: translateX(23px);
+}
+
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
