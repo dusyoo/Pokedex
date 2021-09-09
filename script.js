@@ -133,7 +133,7 @@ checkbox.addEventListener("change", () => {
     checkbox.disabled = true;
     setTimeout(function() {
         checkbox.disabled = false;
-    }, 1500);
+    }, 2500);
     // Reapply pokemon cards with correct theme
     fetchPokemons();
 });
