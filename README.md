@@ -1,10 +1,8 @@
-Created by Dustin Yoo
-<br>
 This website was built using HTML, CSS, and Javascript. I used Visual Studio code and PokeAPI.
 
 # Pokedex
 
-A Pokédex is an electronic device (in this case, a website) designed to catalogue and provide information regarding the various species of Pokémon featured in the Pokémon video game, anime and manga series
+A Pokédex is an electronic device designed to catalogue and provide information regarding the various species of Pokémon featured in the Pokémon video game, anime and manga series
 
 # The Website
 
