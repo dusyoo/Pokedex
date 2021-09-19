@@ -1,7 +1,5 @@
 Created by Dustin Yoo
 <br>
-[Repo here](https://github.com/dusyoo/Pokedex)
-<br>
 This website was built using HTML, CSS, and Javascript. I used Visual Studio code and PokeAPI.
 
 # Pokedex
@@ -10,20 +8,11 @@ A Pokédex is an electronic device (in this case, a website) designed to catalog
 
 # The Website
 
-Features:
-
 - There is 1 main page where it displays pokemon cards with their image, number, name and abilities
 - Select the toggle switch to select a theme of modern (light) or go walk down memory lane and pick retro (dark).
 - Search for a specific pokemon by typing their name.
 - Click the 'Abilities' button on the pokemon's card to display their abilities.
 - Click the 'Abilities' button again to hide their abilities.
-
-# Notes
-
-- Tried my best to decompose code and keep things organized, but admittedly the CSS is a bit messy
-- A majority of the challenges I faced were Javascript related where I would have trouble with DOM event delegation
-- Had trouble using event delegation for dynamically toggling the abilities button, where only even pokemons 'Abilities' button would display. This was fixed by adding e.stopImmediatePropagation(). This one was a huge learning process for me.
-- There are minor imperfections such as the search bar not being centered when expanded, 'Abilities' font not changing to corresponding theme.
 
 # Open API
 
@@ -33,4 +22,4 @@ Pokedex using the [PokeAPI](https://pokeapi.co/) for constructing RESTful API.
 <br>
 PokeAPI provides a RESTful API interface to highly detailed objects built from thousands of lines of data related to Pokémon.
 <br>
-Also used [Pokemon-API](https://purukitto.github.io/pokemon-api/) for pixelated sprites for images.
+Also used [Pokemon-API](https://purukitto.github.io/pokemon-api/) for pixelated sprites.
